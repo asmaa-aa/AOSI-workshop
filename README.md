@@ -1,29 +1,32 @@
 # ALOS-
-ALOS workspace
-
-# etape1: 
-installation des outils (python, ide , bibliotheques, ...)
+  *le code finale implementer duranat le parcours de l'atelier ALOS*
 
 
-# etape2:
-telecharger le dataset
+## Etape1: 
+installation des outils (python, ide , bibliothèques, ...)
 
 
-# etape3:
+## Etape2:
+telecharger de dataset (diabets)
+
+
+## Etape3:
 changemenet de format du dataset (excel --> csv)
 
 
-# etape4:
-NETTOYAGE de données :
-supp une fausse colonne(fakecolumn)
-affichage des statistiques  descriptives des colonnes pour plus de détails (count, max, min , ..)
-modification de quelques valeurs écrites en francais (oui , non --> yes, no)
-modification des formats de données(données alphabétique --> données numérique 1, 0)
-supp d'une ligne qui contient une fausse valeur (ozjdzjod)
+# Etape4:
+#### NETTOYAGE de données :
+ - supp une fausse colonne(fakecolumn)
+ 'dataset = pd.read_csv('diabetes_data_upload-1.csv')'
+print(dataset)
+ - affichage des statistiques  descriptives des colonnes pour plus de détails (count, max, min , ..)
+ - modification de quelques valeurs écrites en francais (oui , non --> yes, no)
+ - modification des formats de données(données alphabétique --> données numérique 1, 0)
+ - supp d'une ligne qui contient une fausse valeur (ozjdzjod)
 
 
 
-# etape5:
+## Etape5:
 affichage des graphes (plots)
 
 
