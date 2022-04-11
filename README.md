@@ -59,7 +59,7 @@ changemenet de format du dataset (excel --> csv)
    ```
  - verification des case vide ( les donne manquants )
  
- ' print(data.isnull().sum()) '
+ ` print(data.isnull().sum()) `
  
  - modification de quelques valeurs écrites en francais (oui , non --> yes, no)
    
