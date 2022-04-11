@@ -7,9 +7,12 @@ import numpy as np
 data = pd.read_csv('C://Users//yygvyubu//Desktop//ALOS--main//ALOS--main//diabetes_data_upload-1.csv')
 print(data)
 
-//statistique avant modification :
-        
-        data.drop('fakecolumn', inplace=True, axis=1)
+
+# supp de la fausse colonne
+:        
+data.drop('fakecolumn', inplace=True, axis=1)
+
+# statistique avant modification :
 
 print(data['Age'].describe())
 print("\n")
