@@ -6,6 +6,7 @@ import numpy as np
 
 data = pd.read_csv('C://Users//yygvyubu//Desktop//ALOS--main//ALOS--main//diabetes_data_upload-1.csv')
 print(data)
+data.drop('fakecolumn', inplace=True, axis=1)
         
 print(data.isnull().sum())
 VALID_Gender = ['Male', 'Female']
