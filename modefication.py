@@ -78,9 +78,23 @@ def mod_Polyuria(Polyuria):
 
 data['Gender'] = data['Gender'].apply(check_Gender)
 data['Gender'] = data['Gender'].apply(mod_gender)
-data['Polyuria'] = data['Polyuria'].apply(check_Polyuria)
 data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
 data['Polydipsia'] = data['Polydipsia'].apply(check_Polydipsia)
+
+data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
+data['Polydipsia'] = data['Polydipsia'].apply(mod_Polyuria)
+data['sudden weight loss'] = data['sudden weight loss'].apply(mod_Polyuria)
+data['weakness'] = data['weakness'].apply(mod_Polyuria)
+data['Polyphagia'] = data['Polyphagia'].apply(mod_Polyuria)
+data['Genital thrush'] = data['Genital thrush'].apply(mod_Polyuria)
+data['visual blurring'] = data['visual blurring'].apply(mod_Polyuria)
+data['Itching'] = data['Itching'].apply(mod_Polyuria)
+data['Irritability'] = data['Irritability'].apply(mod_Polyuria)
+data['delayed healing'] = data['delayed healing'].apply(mod_Polyuria)
+data['partial paresis'] = data['partial paresis'].apply(mod_Polyuria)
+data['muscle stiffness'] = data['muscle stiffness'].apply(mod_Polyuria)
+data['Alopecia'] = data['Alopecia'].apply(mod_Polyuria)
+data['Obesity'] = data['Obesity'].apply(mod_Polyuria)
 
 VALID_visual_blurring = ['Yes', 'No']
                   
