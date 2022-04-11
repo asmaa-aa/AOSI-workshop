@@ -17,8 +17,10 @@ changemenet de format du dataset (excel --> csv)
 # Etape4:
 #### NETTOYAGE de données :
  - supp une fausse colonne(fakecolumn)
- 'dataset = pd.read_csv('diabetes_data_upload-1.csv')'
-print(dataset)
+ ```
+ dataset = pd.read_csv('diabetes_data_upload-1.csv')
+ print(dataset)
+ ```
  - affichage des statistiques  descriptives des colonnes pour plus de détails (count, max, min , ..)
  - modification de quelques valeurs écrites en francais (oui , non --> yes, no)
  - modification des formats de données(données alphabétique --> données numérique 1, 0)
