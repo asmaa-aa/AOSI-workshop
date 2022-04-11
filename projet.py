@@ -1,14 +1,12 @@
-# import des librairies dont nous aurons besoin
+# import la librairie pandas
 import pandas as pd
 
 
-# chargement et affichage des données
-
-data = pd.read_csv('C://Users//yygvyubu//Desktop//ALOS--main//ALOS--main//diabetes_data_upload-1.csv')
+# chargement des données
+data = pd.read_csv('diabetes_data_upload-1.csv')
 #affichage des données
 print(data)
 # supp de la fausse colonne
-        
 data.drop('fakecolumn', inplace=True, axis=1)
 # cherche si il y a des données manquants       
 print(data.isnull().sum())
