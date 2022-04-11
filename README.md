@@ -3,25 +3,19 @@
 
 
 ## Etape1: 
-installation des outils (python, ide , bibliothèques, ...)
+Installation des outils (python, ide , bibliothèques, ...)
 
 
 ## Etape2:
-telecharger de dataset (diabets)
+Telecharger de dataset (diabets)
 
 
 ## Etape3:
-changemenet de format du dataset (excel --> csv)
+Changemenet de format du dataset (excel --> csv)
 
+## Etape3:
 
-# Etape4:
-#### NETTOYAGE de données :
- - supp une fausse colonne(fakecolumn)
- ```
- dataset = pd.read_csv('diabetes_data_upload-1.csv')
- print(dataset)
- ```
- - affichage des statistiques descriptives des colonnes pour plus de détails (count, max, min , ..)
+ Affichage des statistiques descriptives des colonnes pour plus de détails (count, max, min , ..)
  ```
    print(data['Age'].describe())
    print("\n")
@@ -57,6 +51,15 @@ changemenet de format du dataset (excel --> csv)
    print("\n")
    print(data['visual blurring'].describe())
    ```
+
+
+# Etape4:
+#### NETTOYAGE de données :
+ - supp une fausse colonne(fakecolumn)
+ ```
+ dataset = pd.read_csv('diabetes_data_upload-1.csv')
+ print(dataset)
+ ```
  - verification des case vide ( les donne manquants )
  
  ` print(data.isnull().sum()) `
@@ -108,10 +111,10 @@ l'affichage des graphes (plots)
 
 ## Etape6:
 
-comparaison entres les premiers graphes(avant le nettoyage) et les derniers (apres le nettoyage)
+Comparaison entres les premiers graphes(avant le nettoyage) et les derniers (apres le nettoyage)
 
 ## Etape7:
-l'entrainement et test:
+####  l'entrainement et test:
  - assignement des valeurs a x et y variables pour la dévision dde dataset (test and train)
  - dévision du dataset aléatoirement entre l'entrainement (80%) et test (20%) 
 ```
