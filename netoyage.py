@@ -166,6 +166,8 @@ data['Alopecia'] = data['Alopecia'].apply(check_Polydipsia)
 data['Obesity'] = data['Obesity'].apply(check_Polydipsia)
 data['class'] = data['class'].apply(check_class)
 
-
+index=data.loc[data['visual blurring']=='ozjdzjod']
+print(index)
+data=data.drop(61,axis=0)
 
 print(data)
