@@ -14,6 +14,11 @@ Telecharger de dataset (diabets)
 Changemenet de format du dataset (excel --> csv)
 
 ## Etape3:
+- Afficger les dataset /chergement
+ ```
+ dataset = pd.read_csv('diabetes_data_upload-1.csv')
+ print(dataset)
+ ```
 
  Affichage des statistiques descriptives des colonnes pour plus de détails (count, max, min , ..)
  ```
@@ -55,10 +60,9 @@ Changemenet de format du dataset (excel --> csv)
 
 # Etape4:
 #### NETTOYAGE de données :
- - supp une fausse colonne(fakecolumn)
+ - suppression une fausse colonne(fakecolumn)
  ```
- dataset = pd.read_csv('diabetes_data_upload-1.csv')
- print(dataset)
+data.drop('fakecolumn', inplace=True, axis=1)
  ```
  - verification des case vide ( les donne manquants )
  
