@@ -88,7 +88,6 @@ def mod_Class(Class):
 
 data['Gender'] = data['Gender'].apply(check_Gender)
 data['Gender'] = data['Gender'].apply(mod_gender)
-data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
 data['Polydipsia'] = data['Polydipsia'].apply(check_Polydipsia)
 
 data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
