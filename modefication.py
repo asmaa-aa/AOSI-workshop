@@ -9,7 +9,6 @@ print(data)
         
 print(data.isnull().sum())
 VALID_Gender = ['Male', 'Female']
-VALID_GENDER_M = [0, 1]
 
 
                   
@@ -57,6 +56,7 @@ def check_Polyuria(Polyuria):
         
     return Polyuria
 
+VALID_GENDER_M = [0, 1]
 
 def mod_gender(gender):
     if gender not in VALID_GENDER_M:
@@ -66,9 +66,20 @@ def mod_gender(gender):
             return 0
     return gender
 
+VALID_Polyuria_m = [0, 1]
+
+def mod_Polyuria(Polyuria):
+    if Polyuria not in VALID_Polyuria_m:
+        if format(Polyuria) =='Yes':
+            return 1
+        if format(Polyuria) =='No':
+            return 0
+    return Polyuria
+
 data['Gender'] = data['Gender'].apply(check_Gender)
 data['Gender'] = data['Gender'].apply(mod_gender)
 data['Polyuria'] = data['Polyuria'].apply(check_Polyuria)
+data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
 data['Polydipsia'] = data['Polydipsia'].apply(check_Polydipsia)
 
 print(data)
