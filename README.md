@@ -19,6 +19,7 @@ Changemenet de format du dataset (excel --> csv)
  dataset = pd.read_csv('diabetes_data_upload-1.csv')
  print(dataset)
  ```
+![image](https://user-images.githubusercontent.com/62666792/162850534-51a1874a-cef0-4402-a04f-bd206484ab86.png)
 
  Affichage des statistiques descriptives des colonnes pour plus de détails (count, max, min , ..)
  ```
@@ -56,6 +57,8 @@ Changemenet de format du dataset (excel --> csv)
    print("\n")
    print(data['visual blurring'].describe())
    ```
+![image](https://user-images.githubusercontent.com/62666792/162850831-4b9dac48-22e8-4644-b4aa-b1d3ecc794ed.png)
+![image](https://user-images.githubusercontent.com/62666792/162850857-200cab04-0333-48ca-8a6f-d9ecbb5a3837.png)
 
 
 # Etape4:
@@ -67,6 +70,8 @@ data.drop('fakecolumn', inplace=True, axis=1)
  - verification des case vide ( les donne manquants )
  
  ` print(data.isnull().sum()) `
+ ![image](https://user-images.githubusercontent.com/62666792/162850921-eaa70985-730b-44f8-82b3-928f35a5c8c5.png)
+
  
  - modification de quelques valeurs écrites en francais (oui , non --> yes, no)
    
@@ -90,6 +95,8 @@ data.drop('fakecolumn', inplace=True, axis=1)
    data['class'] = data['class'].apply(check_class)
 
   ```  
+  ![image](https://user-images.githubusercontent.com/62666792/162851071-1c89e728-97ed-484f-bb1b-f9dc150bfaf2.png)
+
  - modification des formats de données(données alphabétique --> données numérique 1, 0)
  
    pour l'attribut gender comme exemple :
@@ -101,6 +108,8 @@ data.drop('fakecolumn', inplace=True, axis=1)
             return 0
         return gender
      ```
+     ![image](https://user-images.githubusercontent.com/62666792/162851202-932ac255-1ba4-406f-9fb7-42a4f017f136.png)
+
  - suppression d'une ligne qui contient une fausse valeur (ozjdzjod)
   ```
    index=data.loc[data['visual blurring']=='ozjdzjod']
@@ -121,7 +130,7 @@ l'affichage des graphes (plots)
 
  plt.show()
  ```
-
+ ![image](https://user-images.githubusercontent.com/62666792/162851248-8fb3c08f-8b88-441e-92ec-31b2cf6bde40.png)
 
 ## Etape6:
 
@@ -154,5 +163,8 @@ Affichage les resultats(matrice de confusion et le rapport)
 print(confusion_matrix(y_test, y_predict))
 print(classification_report(y_test, y_predict))
 ```
+![image](https://user-images.githubusercontent.com/62666792/162851305-25f4eca5-e8b4-4fc1-b9a9-42bd74fe5ee4.png)
 
+
+### l'affichage est sur le fichier (rslt)
 
