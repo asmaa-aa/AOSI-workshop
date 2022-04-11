@@ -76,6 +76,16 @@ def mod_Polyuria(Polyuria):
             return 0
     return Polyuria
 
+VALID_class_m = [0, 1]
+
+def mod_Class(Class):
+    if Class not in VALID_class_m:
+        if format(Class) =='Positive':
+            return 1
+        if format(Class) =='Negative':
+            return 0
+    return Class
+
 data['Gender'] = data['Gender'].apply(check_Gender)
 data['Gender'] = data['Gender'].apply(mod_gender)
 data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
@@ -95,6 +105,7 @@ data['partial paresis'] = data['partial paresis'].apply(mod_Polyuria)
 data['muscle stiffness'] = data['muscle stiffness'].apply(mod_Polyuria)
 data['Alopecia'] = data['Alopecia'].apply(mod_Polyuria)
 data['Obesity'] = data['Obesity'].apply(mod_Polyuria)
+data['class'] = data['class'].apply(mod_Class)
 
 VALID_visual_blurring = ['Yes', 'No']
                   
