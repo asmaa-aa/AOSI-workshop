@@ -166,6 +166,9 @@ data['muscle stiffness'] = data['muscle stiffness'].apply(check_YESNO)
 data['Alopecia'] = data['Alopecia'].apply(check_YESNO)
 data['Obesity'] = data['Obesity'].apply(check_YESNO)
 data['class'] = data['class'].apply(check_class)
+#affichage les données aprés netoyage des données 
+print(data)
+
 #appel des fonctions qui remplaces les données non numérique avec 0 et 1
 data['Gender'] = data['Gender'].apply(mod_gender)
 data['Polyuria'] = data['Polyuria'].apply(mod_YESNO)
@@ -184,5 +187,5 @@ data['Alopecia'] = data['Alopecia'].apply(mod_YESNO)
 data['Obesity'] = data['Obesity'].apply(mod_YESNO)
 data['class'] = data['class'].apply(mod_Class)
 
-
+#affichage les données aprés remplacements les données non numérique avec 0 et 1
 print(data)
