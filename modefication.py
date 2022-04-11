@@ -82,4 +82,18 @@ data['Polyuria'] = data['Polyuria'].apply(check_Polyuria)
 data['Polyuria'] = data['Polyuria'].apply(mod_Polyuria)
 data['Polydipsia'] = data['Polydipsia'].apply(check_Polydipsia)
 
+VALID_visual_blurring = ['Yes', 'No']
+                  
+def check_visual_blurring (visual_blurring):
+    if visual_blurring not in VALID_visual_blurring:
+        print(' - "{}" n\', nous le modefiants.' \
+            .format(visual_blurring))
+        if format(visual_blurring) =='Oui':
+            return 'Yes'
+                
+    return visual_blurring
+
+data['visual_blurring'] = data['visual_blurring'].apply(check_visual_blurring)
+
+
 print(data)
