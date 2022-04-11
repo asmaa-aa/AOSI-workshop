@@ -4,7 +4,7 @@ import pandas as pd
 
 # chargement et affichage des données
 
-data = pd.read_csv('diabetes_data_upload-1.csv')
+data = pd.read_csv('C://Users//yygvyubu//Desktop//ALOS--main//ALOS--main//diabetes_data_upload-1.csv')
 print(data)
         
 print(data.isnull().sum())
@@ -13,6 +13,9 @@ VALID_class = ['Positive', 'Negative']
 
 
 
+    
+    
+    
                   
 def check_Gender(Gender):
     if Gender not in VALID_Gender:
@@ -145,6 +148,30 @@ def check_sup(week):
         
     return week
 
+def mod_gender(gender):
+   
+        if format(gender) == 'Male':
+            return 1
+        if format(gender) == 'Female':
+            return 0
+        return gender
+    
+def mod_YESNO(Polyuria):
+    
+        if format(Polyuria) =='Yes':
+            return 1
+        if format(Polyuria) =='No':
+            return 0
+        return Polyuria
+
+def mod_Class(Class):
+    
+        if format(Class) =='Positive':
+            return 1
+        if format(Class) =='Negative':
+            return 0
+        return Class
+
 
 index=data.loc[data['visual blurring']=='ozjdzjod']
 print(index)
@@ -166,7 +193,24 @@ data['muscle stiffness'] = data['muscle stiffness'].apply(check_YESNO)
 data['Alopecia'] = data['Alopecia'].apply(check_YESNO)
 data['Obesity'] = data['Obesity'].apply(check_YESNO)
 data['class'] = data['class'].apply(check_class)
+data['Gender'] = data['Gender'].apply(mod_gender)
 
+
+data['Polyuria'] = data['Polyuria'].apply(mod_YESNO)
+data['Polydipsia'] = data['Polydipsia'].apply(mod_YESNO)
+data['sudden weight loss'] = data['sudden weight loss'].apply(mod_YESNO)
+data['weakness'] = data['weakness'].apply(mod_YESNO)
+data['Polyphagia'] = data['Polyphagia'].apply(mod_YESNO)
+data['Genital thrush'] = data['Genital thrush'].apply(mod_YESNO)
+data['visual blurring'] = data['visual blurring'].apply(mod_YESNO)
+data['Itching'] = data['Itching'].apply(mod_YESNO)
+data['Irritability'] = data['Irritability'].apply(mod_YESNO)
+data['delayed healing'] = data['delayed healing'].apply(mod_YESNO)
+data['partial paresis'] = data['partial paresis'].apply(mod_YESNO)
+data['muscle stiffness'] = data['muscle stiffness'].apply(mod_YESNO)
+data['Alopecia'] = data['Alopecia'].apply(mod_YESNO)
+data['Obesity'] = data['Obesity'].apply(mod_YESNO)
+data['class'] = data['class'].apply(mod_Class)
 
 
 print(data)
