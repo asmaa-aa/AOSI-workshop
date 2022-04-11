@@ -1,0 +1,49 @@
+#Import libraries
+import numpy as np
+from matplotlib import colors
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+
+dataset = pd.read_csv('diabetes_data_upload-1.csv')
+print(dataset)
+
+# changement et  nettoyage colon gendre
+
+
+
+# créer une figure et un axe
+
+a = dataset['Age']
+b = dataset['Age']
+plt.plot(a, b)
+
+plt.show()
+
+
+
+# Assign values a X and y variables:
+X = dataset['Age']
+y = dataset['class']
+
+# Split dataset into random train and test 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
+
+# Standar - lormalise
+scaler = StandardScaler()
+scaler.fit(X_train)
+
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+classifier = KNeighborsClassifier(n_neighbors=5)
+classifier.fit(X_train, y_train)
+
+# Predict y data with classifier:
+y_predict = classifier.predict(X_test)
