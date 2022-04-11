@@ -11,7 +11,7 @@ import pandas as pd
 
 #chargement de dataset / affichage :
     
-dataset = pd.read_csv('C://Users//ibs//Desktop//ALOS--main (1)//ALOS--main//diabetes_data_upload-1.csv')
+dataset = pd.read_csv('diabetes_data_upload-1.csv')
 print(dataset)
 
 
