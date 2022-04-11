@@ -91,6 +91,7 @@ data.drop('fakecolumn', inplace=True, axis=1)
 
   ```  
  - modification des formats de données(données alphabétique --> données numérique 1, 0)
+ 
    pour l'attribut gender comme exemple :
    ```
    def mod_gender(gender):
