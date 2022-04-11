@@ -31,7 +31,7 @@ plt.show()
 X = dataset['Age']
 y = dataset['class']
 
-# Split dataset into random train and test subsets:
+# Split dataset into random train and tests:
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
 
 # normalis # standare
@@ -40,14 +40,17 @@ scaler.fit(X_train)
 
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
-
-
+# choix algo knn car on a deux classe dans notre dataset
+# n_neighbors 2 car notre data donne positive et négative deux classe
+ # le choix de notre algo knn est predifini dans sklearn 
 classifier = KNeighborsClassifier(n_neighbors=2)
+# manipulation de notre calssifier dans les data train and test avec fitting 
 classifier.fit(X_train, y_train)
 
-# Predict y data with classifier:
+# Prédictions data with classifier knn :
 y_predict = classifier.predict(X_test)
 
 # Print results:
+# afficha de matrice de confusion pour les test de qualité de model 
 print(confusion_matrix(y_test, y_predict))
 print(classification_report(y_test, y_predict))
