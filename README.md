@@ -70,6 +70,7 @@ data.drop('fakecolumn', inplace=True, axis=1)
  - verification des case vide ( les donne manquants )
  
  ` print(data.isnull().sum()) `
+ 
  ![image](https://user-images.githubusercontent.com/62666792/162850921-eaa70985-730b-44f8-82b3-928f35a5c8c5.png)
 
  
