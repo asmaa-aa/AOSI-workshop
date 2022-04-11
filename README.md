@@ -29,3 +29,17 @@ affichage des graphes (plots)
 
 # etape6:
 comparaison entres les premiers graphes(avant le nettoyage) et les derniers (apres le nettoyage)
+
+# etape7:
+assignement des valeurs a x et y variables pour la dévision dde dataset (test and train)
+
+# etape8:
+dévision du dataset aléatoirement entre l'entrainement (80%) et test (20%) et standarisation 
+
+# etape9:
+choix d'algorithme : K-nearest neighbour KNN 
+
+# etape10:
+manipulation d'algorithme pour la classification de data 
+prediction avec le classificateur
+affichage des resultats(matrice de confusion et le rapport)
