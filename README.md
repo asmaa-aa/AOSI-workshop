@@ -14,7 +14,7 @@ Telecharger de dataset (diabets)
 Changemenet de format du dataset (excel --> csv)
 
 ## Etape3:
-- Afficger les dataset /chergement
+- Afficher les dataset /chergement
  ```
  dataset = pd.read_csv('diabetes_data_upload-1.csv')
  print(dataset)
@@ -91,6 +91,15 @@ data.drop('fakecolumn', inplace=True, axis=1)
 
   ```  
  - modification des formats de données(données alphabétique --> données numérique 1, 0)
+   pour l'attribut gender comme exemple :
+   ```
+   def mod_gender(gender):
+        if format(gender) == 'Male':
+            return 1
+        if format(gender) == 'Female':
+            return 0
+        return gender
+     ```
  - suppression d'une ligne qui contient une fausse valeur (ozjdzjod)
   ```
    index=data.loc[data['visual blurring']=='ozjdzjod']
