@@ -160,5 +160,5 @@ def check_visual_blurring (visual_blurring):
 
 data['visual_blurring'] = data['visual_blurring'].apply(check_visual_blurring)
 
-
+df_s1 = df_s1.drop(df_s1.query('sepal_length==5.0').index)
 print(data)
