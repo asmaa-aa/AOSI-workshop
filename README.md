@@ -1,5 +1,5 @@
 # ALOS-
-  *le code finale implementer duranat le parcours de l'atelier ALOS*
+  *le code finale implementer duranat le parcours de l'atelier AOSI*
 
 
 ## Etape1: 
