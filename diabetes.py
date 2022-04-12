@@ -334,8 +334,8 @@ print(dataset)
 
 # Assign values a X and y variables:
     
-X = dataset['Age']
-y = dataset['class']
+X = dataset.iloc[:,400].values
+y = dataset[':,400..500'].values
 
 
 # Split dataset into random train and tests:
