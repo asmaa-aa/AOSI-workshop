@@ -330,12 +330,19 @@ dataset['class'] = dataset['class'].apply(mod_Class)
 
 print(dataset)
 
+# créer une figure et un axe après nettoyage
 
+a2 = dataset['Age']
+b2 = dataset['class']
+plt.plot(a2, b2)
+
+plt.show()
 
 # Assign values a X and y variables:
     
 X = dataset.iloc[:,400].values
-y = dataset[':,400..500'].values
+
+y = dataset.iloc[':,400..500'].values
 
 
 # Split dataset into random train and tests:
