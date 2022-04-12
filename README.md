@@ -167,5 +167,5 @@ print(classification_report(y_test, y_predict))
 ![image](https://user-images.githubusercontent.com/62666792/162851305-25f4eca5-e8b4-4fc1-b9a9-42bd74fe5ee4.png)
 
 
-### l'affichage est sur le fichier (rslt)
+### l'affichage est sur le fichier [execution](https://github.com/asmaa-aa/ALOS-/blob/main/execution.pdf)
 
