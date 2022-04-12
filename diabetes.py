@@ -72,7 +72,7 @@ dataset.drop('fakecolumn', inplace=True, axis=1)
 print(dataset.isnull().sum())
 
 
-#les listes des valeurs 
+#les listes des valeurs util
 
 VALID_Gender = ['Male', 'Female']
 VALID_class = ['Positive', 'Negative']
@@ -81,7 +81,7 @@ VALID_Polyuria= ['Yes', 'No']
     
 def check_Gender(Gender):
     
-    #verification si la valeur de la case apartient à la lise qui contient Male et Female
+    #verification si la valeur de la case appartient à la liste qui contient Male et Female
     
     if Gender not in VALID_Gender:
         
@@ -90,7 +90,7 @@ def check_Gender(Gender):
         print(' - "{}" n\', nous le modefiants.' \
             .format(Gender))
             
-            #recherche de les valeurs et les remplacé
+            #recherche de les valeurs et les remplacer
             
         if format(Gender) =='homme':
             return 'Male'
@@ -100,7 +100,7 @@ def check_Gender(Gender):
 
 def check_YESNO(Polydipsia):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case appartient à la liste qui contient Yes et No
     
     if Polydipsia not in VALID_Polydipsia:
         print(' - "{}" n\', nous le modefiants.' \
@@ -109,7 +109,7 @@ def check_YESNO(Polydipsia):
                  
 def check_Polyuria(Polyuria):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case appartient à la liste qui contient Yes et No
     
     if Polyuria not in VALID_Polyuria:
         
@@ -118,14 +118,14 @@ def check_Polyuria(Polyuria):
         print(' - "{}" n\', nous le modefiants.' \
             .format(Polyuria))
             
-            #recherche de la valeur et la remplacé
+            #recherche de la valeur et la remplacer
             
         if format(Polyuria) =='Oui':
             return 'Yes'
     return Polyuria
 def check_sudden(sudden_weight_loss):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case apartient à la liste qui contient Yes et No
     
     if sudden_weight_loss not in VALID_Polyuria:
         
@@ -134,14 +134,14 @@ def check_sudden(sudden_weight_loss):
         print(' - "{}" n\', nous le modefiants.' \
             .format(sudden_weight_loss))
             
-            #recherche de la valeur et la remplacé
+            #recherche de la valeur et la remplacer
             
         if format(sudden_weight_loss) =='Oui':
             return 'Yes'
     return sudden_weight_loss
 def check_oui(week):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case apartient à la liste qui contient Yes et No
     
     if week not in VALID_Polyuria:
         
@@ -150,7 +150,7 @@ def check_oui(week):
         print(' - "{}" n\', nous le modefiants.' \
             .format(week))
             
-        #recherche de la valeur et la remplacé
+        #recherche de la valeur et la remplacer
         
         if format(week) =='oui':
             return 'Yes'
@@ -160,7 +160,7 @@ def check_oui(week):
  
 def check_Polyphagia(week):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case apartient à la liste qui contient Yes et No
     
     if week not in VALID_Polyuria:
         
@@ -169,7 +169,7 @@ def check_Polyphagia(week):
         print(' - "{}" n\', nous le modefiants.' \
             .format(week))
             
-        #recherche de la valeur et la remplacé
+        #recherche de la valeur et la remplacer
         
         if format(week) =='na':
             return 'No'
@@ -179,7 +179,7 @@ def check_Polyphagia(week):
 
 def check_del(week):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case appartient à la liste qui contient Yes et No
     
     if week not in VALID_Polyuria:
         
@@ -188,7 +188,7 @@ def check_del(week):
         print(' - "{}" n\', nous le modefiants.' \
             .format(week))
             
-        #recherche de les valeurs et les remplacé
+        #recherche de les valeurs et les remplacer
         
         if format(week) =='na':
             return 'No'
@@ -202,7 +202,7 @@ def check_del(week):
 
 def check_Genital(week):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case appartient à la liste qui contient Yes et No
     
     if week not in VALID_Polyuria:
         
@@ -211,7 +211,7 @@ def check_Genital(week):
         print(' - "{}" n\', nous le modefiants.' \
             .format(week))
             
-            #recherche de la valeur et la remplacé
+            #recherche de la valeur et la remplacer
             
         if format(week) =='Nan':
             return 'No'
@@ -221,7 +221,7 @@ def check_Genital(week):
 
 def check_itch(week):
     
-    #verification si la valeur de la case apartient à la lise qui contient Yes et No
+    #verification si la valeur de la case appartient à la liste qui contient Yes et No
     
     if week not in VALID_Polyuria:
         
@@ -230,14 +230,14 @@ def check_itch(week):
         print(' - "{}" n\', nous le modefiants.' \
             .format(week))
             
-            #recherche de la valeur et la remplacé
+            #recherche de la valeur et la remplacer
             
         if format(week) =='none':
             return 'No'
     return week
 def check_class(Polydipsia):
     
-    #verification si la valeur de la case apartient à la lise qui contient Positive et Negative
+    #verification si la valeur de la case apartient à la liste qui contient Positive et Negative
     
     if Polydipsia not in VALID_class:
         print(' - "{}" n\', nous le modefiants.' \
