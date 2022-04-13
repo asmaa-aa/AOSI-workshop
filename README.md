@@ -1,4 +1,4 @@
-# ALOS-
+# AOSI-workshop
   *le code finale implementer duranat le parcours de l'atelier AOSI*
 
 
